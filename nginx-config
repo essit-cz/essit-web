@@ -1,0 +1,83 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name enterprise-systems.sk www.enterprise-systems.sk;
+
+    # Document root — where you'll copy the website files
+    root /var/www/ess-website;
+    index index.html;
+
+    # Security headers (Cloudflare handles SSL, so we serve HTTP internally)
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # Gzip compression for static assets
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml;
+
+    # Primary site
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Cache static assets aggressively
+    location ~* \.(html|htm)$ {
+        expires 1h;
+        add_header Cache-Control "public, max-age=3600";
+    }
+
+    # Font caching (Google Fonts)
+    location ~* \.(woff2?|ttf|otf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    # Deny access to hidden files
+    location ~ /\. {
+        deny all;
+        access_log off;
+        log_not_found off;
+    }
+
+    # Custom 404
+    error_page 404 /404.html;
+    location = /404.html {
+        internal;
+    }
+}
+
+# Optional: Redirect HTTP to HTTPS if you add Let's Encrypt on the server
+# server {
+#     listen 443 ssl http2;
+#     server_name enterprise-systems.sk www.enterprise-systems.sk;
+#
+#     ssl_certificate /etc/letsencrypt/live/enterprise-systems.sk/fullchain.pem;
+#     ssl_certificate_key /etc/letsencrypt/live/enterprise-systems.sk/privkey.pem;
+#     ssl_trusted_certificate /etc/letsencrypt/live/enterprise-systems.sk/chain.pem;
+#
+#     # TLS best practices
+#     ssl_protocols TLSv1.2 TLSv1.3;
+#     ssl_ciphers HIGH:!aNULL:!MD5;
+#     ssl_prefer_server_ciphers on;
+#     ssl_session_cache shared:SSL:10m;
+#     ssl_session_timeout 1d;
+#
+#     root /var/www/ess-website;
+#     index index.html;
+#
+#     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+#     add_header X-Frame-Options "SAMEORIGIN" always;
+#     add_header X-Content-Type-Options "nosniff" always;
+#
+#     location / {
+#         try_files $uri $uri/ =404;
+#     }
+#
+#     location ~ /\. {
+#         deny all;
+#     }
+# }

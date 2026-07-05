@@ -1,0 +1,161 @@
+# Enterprise Systems Services — Website
+
+Static multi-page website built from the CE IT Services competitive research.
+
+## Files
+
+- `index.html` — Homepage (dark hero, trust bar, services overview, differentiation)
+- `network-engineering.html` — Network Engineering service page (SLA table, monitoring, FAQ)
+- `network-migration.html` — Migration Projects page (timeline, pricing, case studies)
+- `server-break-fix.html` — Server Break-Fix page (process table, parts warranty, FAQ)
+- `contact.html` — Contact page (form, contact methods, coverage area)
+- `nginx-config` — Production nginx configuration template
+
+## Design
+
+- **Hybrid dark/light**: Dark header + hero sections, light content sections
+- **Inter** font from Google Fonts
+- Fully responsive (mobile hamburger menu)
+- CSS-only — no JavaScript dependencies
+- All pages share consistent navigation and footer
+
+## Quick Deploy (nginx)
+
+### 1. SSH into your server
+
+```bash
+ssh youruser@your-server-ip
+```
+
+### 2. Install nginx (if not already installed)
+
+**Ubuntu/Debian:**
+```bash
+sudo apt update
+sudo apt install -y nginx
+```
+
+**CentOS/RHEL:**
+```bash
+sudo yum install -y epel-release
+sudo yum install -y nginx
+```
+
+### 3. Create the directory and copy files
+
+```bash
+sudo mkdir -p /var/www/ess-website
+sudo cp index.html /var/www/ess-website/
+sudo cp network-engineering.html /var/www/ess-website/
+sudo cp network-migration.html /var/www/ess-website/
+sudo cp server-break-fix.html /var/www/ess-website/
+sudo cp contact.html /var/www/ess-website/
+```
+
+### 4. Set permissions
+
+```bash
+sudo chown -R www-data:www-data /var/www/ess-website
+sudo chmod -R 755 /var/www/ess-website
+```
+
+### 5. Deploy nginx configuration
+
+```bash
+# Backup default config
+sudo cp /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.bak
+
+# Copy the website config
+sudo cp nginx-config /etc/nginx/sites-available/ess-website
+sudo ln -s /etc/nginx/sites-available/ess-website /etc/nginx/sites-enabled/
+
+# Test config before reloading
+sudo nginx -t
+```
+
+If `nginx -t` passes, reload:
+
+```bash
+sudo systemctl reload nginx
+```
+
+### 6. Verify
+
+Open `http://your-server-ip` in a browser. You should see the homepage.
+
+## Cloudflare Setup
+
+### DNS Configuration
+
+In your Cloudflare dashboard for the domain:
+
+1. **Add/modify A record:**
+   - Name: `@` → Point to your server's public IP
+   - Proxied (orange cloud): **ON** (for CDN + DDoS protection)
+   
+2. **Add/modify A record for www:**
+   - Name: `www` → CNAME to `@` (or same IP)
+   - Proxied (orange cloud): **ON**
+
+### SSL/TLS Settings
+
+In Cloudflare → SSL/TLS → Overview:
+
+1. Set encryption mode to **"Full"** (Cloudflare → your server over HTTP is fine)
+2. If you add Let's Encrypt on the server later, switch to **"Full (strict)"**
+
+### Additional Settings (Recommended)
+
+- **Page Rules:** Create a rule for `enterprise-systems.sk/*` → "Cache Level: Cache Everything" (optional, Cloudflare CDN handles static files well by default)
+- **Security Level:** "Essentially Off" or "Low" initially, then adjust
+- **Always Use HTTPS:** ON (Cloudflare redirects automatically)
+
+## Optional: Let's Encrypt (server-side SSL)
+
+If you want encrypted traffic between Cloudflare and your server ("Full (strict)" mode):
+
+```bash
+# Install Certbot
+sudo apt install -y certbot python3-certbot-nginx
+
+# Get certificate (requires port 80 open and DNS pointing to server)
+sudo certbot --nginx -d enterprise-systems.sk -d www.enterprise-systems.sk
+
+# Enable auto-renewal (should be enabled by default)
+sudo systemctl enable certbot.timer
+```
+
+Then uncomment the SSL server block in `nginx-config` and reload nginx.
+
+## Customization Checklist
+
+Before going live:
+
+- [ ] Replace `+421 XXX XXX XXX` with actual phone number
+- [ ] Replace `info@enterprise-systems.sk` with actual email (or update if different domain)
+- [ ] Update office address if known
+- [ ] Replace placeholder "Case Studies" content with real client stories
+- [ ] Update certification badges with actual vendor partnerships
+- [ ] Add Google Analytics / privacy policy before launch
+- [ ] Test form backend (currently frontend-only — needs a form handler)
+- [ ] Update copyright year as needed
+
+## Form Backend
+
+The contact form is frontend-only. Options to handle submissions:
+
+1. **Formspree.io** — Free tier, just change `action="#"` to `action="https://formspree.io/f/YOUR_ID"`
+2. **Netlify Forms** — If hosted on Netlify, add `netlify` attribute to form
+3. **Custom backend** — PHP/Node endpoint on your server
+4. **Email via PHP** — Simple `mailto:` fallback (least professional)
+
+## File Structure on Server
+
+```
+/var/www/ess-website/
+├── index.html
+├── network-engineering.html
+├── network-migration.html
+├── server-break-fix.html
+└── contact.html
+```
