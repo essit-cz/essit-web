@@ -29,6 +29,13 @@ docker compose up --build -d
 # Access at http://localhost
 ```
 
+## Deploy to TrueNAS (Arcane / Dockge)
+
+1. Copy this entire directory to your TrueNAS server (e.g., `/path/to/ess-website/`)
+2. In Arcane/Dockge, create a new stack from this directory
+3. Arcane will detect `docker-compose.yml` and `Dockerfile` automatically
+4. Start the stack — it will be accessible on port 80
+
 ## Deploy to Your Server
 
 1. Copy all files to your server

@@ -1,20 +1,6 @@
-version: '3.8'
-
 services:
   website:
     build: .
     ports:
       - "80:80"
     restart: unless-stopped
-    volumes:
-      - static-content:/usr/share/nginx/html
-    networks:
-      - ess-net
-
-volumes:
-  static-content:
-    driver: local
-
-networks:
-  ess-net:
-    driver: bridge
