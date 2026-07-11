@@ -3,17 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>L1/L2 Network Support | Enterprise Systems Services</title>
-  <meta name="description" content="Transparent SLA-driven L1/L2 network support for Central European enterprises. Multi-vendor monitoring, bilingual teams, and ITSM integration.">
+  <title>L1/L2 Network Support Czech Republic | Enterprise Systems Services</title>
+  <meta name="description" content="Transparent SLA-driven L1/L2 network support for Central European enterprises. Multi-vendor monitoring, bilingual teams, ITSM integration. 24/7 coverage across CZ, SK, PL, HU.">
+  <meta name="keywords" content="L2 network support Czech Republic, managed network monitoring Poland, Cisco L1/L2 support Central Europe, 24/7 network escalation SLA, GDPR compliant IT support Czech Republic">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="L1/L2 Network Support | Enterprise Systems Services">
+  <meta property="og:description" content="SLA-driven network engineering support with published response times, multi-vendor monitoring, and bilingual technical teams.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterprise-systems.cz/en/network-engineering">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://enterprise-systems.cz/en/network-engineering">
+  <link rel="alternate" hreflang="cs" href="https://enterprise-systems.cz/cs/sitove-zapojeni">
+  <link rel="alternate" hreflang="x-default" href="https://enterprise-systems.cz/en/network-engineering">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://enterprise-systems.cz/en/network-engineering">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --dark:#0b1120;--dark-mid:#111827;--dark-border:#2a3550;--light:#f8fafc;--light-mid:#f1f5f9;--light-card:#fff;--light-border:#e2e8f0;--accent:#3b82f6;--accent-hover:#2563eb;--accent2:#10b981;--text-light:#e2e8f0;--text-dim:#94a3b8;--text-dark:#1e293b;--text-dark-mid:#475569;--radius:10px;--shadow:0 4px 24px rgba(0,0,0,.12);--max-width:1200px; }
+    :root { --dark:#0b1120;--dark-mid:#111827;--dark-border:#2a3550;--light:#f8fafc;--light-mid:#f1f5f9;--light-card:#fff;--light-border:#e2e8f0;--accent:#3b82f6;--accent-hover:#2563eb;--accent2:#10b981;--accent2-hover:#059669;--text-light:#e2e8f0;--text-dim:#94a3b8;--text-dark:#1e293b;--text-dark-mid:#475569;--radius:10px;--shadow:0 4px 24px rgba(0,0,0,.12);--max-width:1200px; }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.65;font-size:16px;color:var(--text-dark)}
-    .site-header{background:var(--dark);color:var(--text-light);border-bottom:1px solid var(--dark-border)}
+    .site-header{background:var(--dark);color:var(--text-light);border-bottom:1px solid var(--dark-border);position:sticky;top:0;z-index:100}
     .top-bar{max-width:var(--max-width);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
     .site-header .logo{font-weight:800;font-size:1.1rem;color:var(--accent);letter-spacing:.5px;text-decoration:none}
     .site-header .logo span{color:var(--light)}
@@ -34,6 +51,7 @@
     p{margin-bottom:1rem;color:var(--text-dark-mid)}
     .badge{display:inline-block;background:rgba(59,130,246,.1);color:var(--accent);font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:.3rem .8rem;border-radius:4px;margin-bottom:.8rem}
     .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin:2rem 0}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0}
     .card{background:var(--light-card);border:1px solid var(--light-border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow)}
     .card h4{font-size:1.1rem;font-weight:700;color:var(--text-dark);margin-bottom:.5rem}
     .card ul{list-style:none;padding:0;margin:1rem 0}
@@ -46,10 +64,17 @@
     .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.6rem;border-radius:8px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:inherit}
     .btn-primary{background:var(--accent);color:#fff}
     .btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+    .btn-outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+    .btn-outline:hover{background:var(--accent);color:#fff}
     .text-center{text-align:center;margin-top:2rem}
     .faq details{margin-bottom:1rem;border-bottom:1px solid var(--light-border);padding-bottom:1rem}
     .faq summary{font-weight:600;cursor:pointer;color:var(--text-dark)}
     .faq p{margin-top:.5rem;font-size:.92rem}
+    .compliance-bar{background:linear-gradient(135deg, rgba(16,185,129,.08) 0%, rgba(59,130,246,.08) 100%);padding:1.5rem 2rem;border:1px solid rgba(16,185,129,.2);border-radius:var(--radius);margin:2rem 0}
+    .compliance-bar h4{color:var(--accent2);margin-bottom:.5rem;font-size:1rem}
+    .compliance-bar p{font-size:.9rem;margin:0}
+    .coverage-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1rem}
+    .coverage-tags span{background:var(--light-mid);padding:4px 12px;border-radius:4px;font-size:.85rem;font-weight:500}
     .site-footer{background:var(--dark);color:var(--text-dim);padding:3rem 2rem;border-top:1px solid var(--dark-border)}
     .footer-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem}
     .footer-brand h3{color:var(--accent);font-size:1rem;margin-bottom:.5rem}
@@ -69,14 +94,14 @@
 <body>
   <header class="site-header">
     <div class="top-bar">
-      <a href="index.html" class="logo">Enterprise <span>Systems Services</span></a>
+      <a href="index.html" class="logo">ESS <span>Enterprise Systems Services</span></a>
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="network-engineering.html" class="active">Network Engineering</a>
         <a href="network-migration.html">Network Migration</a>
         <a href="server-break-fix.html">Server Break-Fix</a>
-        <a href="contact.html" class="btn-nav">Contact Us</a>
+        <a href="contact.html" class="btn-nav">Request Assessment</a>
       </nav>
     </div>
   </header>
@@ -85,33 +110,34 @@
     <section class="page-hero">
       <div class="page-hero-inner">
         <span class="badge">Managed Support</span>
-        <h1>L1/L2 Network Engineering & Support</h1>
-        <p class="sub">Reactive and hybrid managed support with transparent SLAs, multi-vendor compatibility, and seamless ITSM integration for Central European enterprises.</p>
+        <h1>L1/L2 Network Engineering &amp; Support</h1>
+        <p class="sub">Reactive and hybrid managed support with published SLAs, multi-vendor compatibility, and seamless ITSM integration. Bilingual technical teams covering CZ, SK, PL, and HU.</p>
       </div>
     </section>
 
     <section class="page-section">
-      <h2>Service Tiers & SLA Matrix</h2>
-      <p>We publish exact response/resolution targets. Missed SLAs trigger predefined penalty clauses.</p>
+      <h2>Service Tiers &amp; SLA Matrix</h2>
+      <p>We publish exact response/resolution targets. Missed SLAs trigger predefined penalty clauses — documented in your service agreement, not buried in legal footers.</p>
       <table>
         <thead>
           <tr><th>Service Level</th><th>Response Time</th><th>Resolution Target</th><th>Support Hours</th><th>Team Language</th></tr>
         </thead>
         <tbody>
-          <tr><td>L1 Standard</td><td>≤ 30 min</td><td>≤ 4 hours</td><td>24/7/365</td><td>CZ/EN/PL</td></tr>
-          <tr><td>L2 Escalation</td><td>≤ 15 min</td><td>≤ 2 hours</td><td>24/7/365</td><td>EN/DE/PL</td></tr>
-          <tr><td>Premium Managed</td><td>≤ 10 min</td><td>≤ 1 hour</td><td>24/7/365</td><td>Multi-lingual</td></tr>
+          <tr><td><strong>L1 Standard</strong></td><td>≤ 30 min</td><td>≤ 4 hours</td><td>24/7/365</td><td>CZ / EN / PL</td></tr>
+          <tr><td><strong>L2 Escalation</strong></td><td>≤ 15 min</td><td>≤ 2 hours</td><td>24/7/365</td><td>EN / DE / PL</td></tr>
+          <tr><td><strong>Premium Managed</strong></td><td>≤ 10 min</td><td>≤ 1 hour</td><td>24/7/365</td><td>Multilingual</td></tr>
         </tbody>
       </table>
 
       <div class="grid-2">
         <div class="card">
-          <h4>Monitoring & Tools</h4>
+          <h4>Monitoring &amp; Tooling</h4>
           <ul>
             <li>Cisco, Juniper, Aruba, MikroTik native platforms</li>
-            <li>PRTG / Zabbix / SolarWinds deployment & management</li>
-            <li>Jira Service Management & Freshservice integration</li>
-            <li>Automated backup validation & config drift alerts</li>
+            <li>PRTG / Zabbix / SolarWinds deployment &amp; management</li>
+            <li>Jira Service Management &amp; Freshservice integration</li>
+            <li>ServiceNow, custom webhook pipelines</li>
+            <li>Automated backup validation &amp; config drift alerts</li>
           </ul>
         </div>
         <div class="card">
@@ -119,32 +145,45 @@
           <ul>
             <li>Auto-ticket creation via SNMP/syslog thresholds</li>
             <li>Multi-channel alerting (SMS, email, Teams, Slack)</li>
-            <li>On-site dispatch within 2-4 hours (CZ/SK/HU)</li>
+            <li>On-site dispatch within 2–4 hours (CZ/SK/HU)</li>
             <li>Monthly SLA reporting with root-cause analysis</li>
+            <li>Quarterly service reviews with stakeholders</li>
           </ul>
         </div>
       </div>
 
-      <div class="page-section">
-        <h3>Frequently Asked Questions</h3>
-        <div class="faq">
-          <details>
-            <summary>Do you require vendor lock-in for support?</summary>
-            <p>No. Our L1/L2 support is strictly vendor-agnostic. We work with your existing hardware and licensing, focusing on uptime and workflow standardization.</p>
-          </details>
-          <details>
-            <summary>Can you integrate with our existing ITSM?</summary>
-            <p>Yes. We support Jira Service Management, Freshservice, ServiceNow, and custom webhook pipelines. Ticket routing and SLA tracking are fully configurable.</p>
-          </details>
-          <details>
-            <summary>What happens if SLA targets are missed?</summary>
-            <p>We publish our SLA matrix publicly. Missed targets trigger predefined penalty clauses as documented in our service agreement.</p>
-          </details>
-        </div>
+      <div class="compliance-bar">
+        <h4>🔒 Compliance-Aligned Support</h4>
+        <p>All support processes aligned with GDPR and Czech Data Protection Act. Ticket data stored in regional data centers. Bilingual reporting (Czech/English) available on demand.</p>
       </div>
 
-      <div class="text-center">
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq">
+        <details>
+          <summary>Do you require vendor lock-in for support?</summary>
+          <p>No. Our L1/L2 support is strictly vendor-agnostic. We work with your existing hardware and licensing, focusing on uptime and workflow standardization rather than margin markup.</p>
+        </details>
+        <details>
+          <summary>Can you integrate with our existing ITSM platform?</summary>
+          <p>Yes. We support Jira Service Management, Freshservice, ServiceNow, and custom webhook pipelines. Ticket routing, SLA tracking, and automated notifications are fully configurable.</p>
+        </details>
+        <details>
+          <summary>What happens if SLA targets are missed?</summary>
+          <p>We publish our SLA matrix publicly. Missed targets trigger predefined penalty clauses as documented in our service agreement. Transparency is our differentiator — not a hidden fine print.</p>
+        </details>
+        <details>
+          <summary>Which regions do you cover on-site?</summary>
+          <p>On-site dispatch is available across the Czech Republic, Slovakia, Poland, and Hungary. Response times vary by region and service tier — see our SLA matrix above or <a href="contact.html">request a regional assessment</a>.</p>
+        </details>
+        <details>
+          <summary>Is L1/L2 support GDPR-compliant?</summary>
+          <p>Yes. All support processes are aligned with GDPR and the Czech Data Protection Act. Ticket data and configuration backups can be stored in regional data centers to meet data residency requirements.</p>
+        </details>
+      </div>
+
+      <div class="text-center" style="margin-top:2.5rem">
         <a href="contact.html" class="btn btn-primary">Request an L1/L2 Assessment</a>
+        <a href="network-migration.html" class="btn btn-outline" style="margin-left:1rem">Explore Migration Projects</a>
       </div>
     </section>
   </main>
@@ -153,7 +192,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <h3>Enterprise Systems Services, s.r.o.</h3>
-        <p>Certified IT services for Central European enterprises. Transparent SLAs, vendor-agnostic methodology, bilingual technical teams.</p>
+        <p>Certified IT services for Central European enterprises. Headquartered in Prague, Czech Republic. Transparent SLAs, vendor-agnostic methodology, bilingual technical teams.</p>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -163,21 +202,22 @@
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
-        <a href="#">Migration Checklists</a>
-        <a href="#">SLA Templates</a>
+        <a href="#">Migration Readiness Checklist</a>
+        <a href="#">SLA Comparison Guide</a>
         <a href="#">Case Studies</a>
+        <a href="#">Compliance Guides</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="mailto:info@enterprise-systems.sk">info@enterprise-systems.sk</a>
-        <a href="tel:+421000000000">+421 XXX XXX XXX</a>
+        <a href="mailto:info@enterprise-systems.cz">info@enterprise-systems.cz</a>
+        <a href="tel:+420000000000">+420 XXX XXX XXX</a>
         <a href="contact.html">Request Assessment</a>
       </div>
     </div>
     <div class="footer-bottom">
-      © 2025 Enterprise Systems Services, s.r.o. All rights reserved.
+      &copy; 2026 Enterprise Systems Services, s.r.o. All rights reserved. | <a href="#" style="color:var(--text-dim)">GDPR</a> | <a href="#" style="color:var(--text-dim)">Cookie Policy</a>
     </div>
-  </footer>
+    </footer>
 
   <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {

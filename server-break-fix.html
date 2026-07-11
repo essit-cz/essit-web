@@ -3,17 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certified Server Break-Fix Services | Enterprise Systems Services</title>
-  <meta name="description" content="Vendor-backed server break-fix services with component-level diagnostics, data preservation protocols, and guaranteed parts sourcing in Central Europe.">
+  <title>Certified Server Repair Czech Republic | Enterprise Systems Services</title>
+  <meta name="description" content="Vendor-certified server break-fix services in Central Europe. Dell, HPE, Lenovo authorized pathways. Component-level diagnostics, data preservation protocols, and guaranteed parts sourcing.">
+  <meta name="keywords" content="certified server repair Czech Republic, Dell HPE break-fix services, RAID recovery, server maintenance, hardware diagnostics Central Europe">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Certified Server Break-Fix Services | Enterprise Systems Services">
+  <meta property="og:description" content="Vendor-certified server break-fix with guaranteed parts sourcing, data preservation protocols, and published turnaround SLAs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterprise-systems.cz/en/server-break-fix">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://enterprise-systems.cz/en/server-break-fix">
+  <link rel="alternate" hreflang="cs" href="https://enterprise-systems.cz/cs/oprava-serveru">
+  <link rel="alternate" hreflang="x-default" href="https://enterprise-systems.cz/en/server-break-fix">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://enterprise-systems.cz/en/server-break-fix">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --dark:#0b1120;--dark-mid:#111827;--dark-border:#2a3550;--light:#f8fafc;--light-mid:#f1f5f9;--light-card:#fff;--light-border:#e2e8f0;--accent:#3b82f6;--accent-hover:#2563eb;--accent2:#10b981;--text-light:#e2e8f0;--text-dim:#94a3b8;--text-dark:#1e293b;--text-dark-mid:#475569;--radius:10px;--shadow:0 4px 24px rgba(0,0,0,.12);--max-width:1200px; }
+    :root { --dark:#0b1120;--dark-mid:#111827;--dark-border:#2a3550;--light:#f8fafc;--light-mid:#f1f5f9;--light-card:#fff;--light-border:#e2e8f0;--accent:#3b82f6;--accent-hover:#2563eb;--accent2:#10b981;--accent2-hover:#059669;--text-light:#e2e8f0;--text-dim:#94a3b8;--text-dark:#1e293b;--text-dark-mid:#475569;--radius:10px;--shadow:0 4px 24px rgba(0,0,0,.12);--max-width:1200px; }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.65;font-size:16px;color:var(--text-dark)}
-    .site-header{background:var(--dark);color:var(--text-light);border-bottom:1px solid var(--dark-border)}
+    .site-header{background:var(--dark);color:var(--text-light);border-bottom:1px solid var(--dark-border);position:sticky;top:0;z-index:100}
     .top-bar{max-width:var(--max-width);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
     .site-header .logo{font-weight:800;font-size:1.1rem;color:var(--accent);letter-spacing:.5px;text-decoration:none}
     .site-header .logo span{color:var(--light)}
@@ -46,7 +63,15 @@
     .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.6rem;border-radius:8px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:inherit}
     .btn-primary{background:var(--accent);color:#fff}
     .btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+    .btn-outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+    .btn-outline:hover{background:var(--accent);color:#fff}
     .text-center{text-align:center;margin-top:2rem}
+    .faq details{margin-bottom:1rem;border-bottom:1px solid var(--light-border);padding-bottom:1rem}
+    .faq summary{font-weight:600;cursor:pointer;color:var(--text-dark)}
+    .faq p{margin-top:.5rem;font-size:.92rem}
+    .compliance-bar{background:linear-gradient(135deg, rgba(16,185,129,.08) 0%, rgba(59,130,246,.08) 100%);padding:1.5rem 2rem;border:1px solid rgba(16,185,129,.2);border-radius:var(--radius);margin:2rem 0}
+    .compliance-bar h4{color:var(--accent2);margin-bottom:.5rem;font-size:1rem}
+    .compliance-bar p{font-size:.9rem;margin:0}
     .site-footer{background:var(--dark);color:var(--text-dim);padding:3rem 2rem;border-top:1px solid var(--dark-border)}
     .footer-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem}
     .footer-brand h3{color:var(--accent);font-size:1rem;margin-bottom:.5rem}
@@ -66,14 +91,14 @@
 <body>
   <header class="site-header">
     <div class="top-bar">
-      <a href="index.html" class="logo">Enterprise <span>Systems Services</span></a>
+      <a href="index.html" class="logo">ESS <span>Enterprise Systems Services</span></a>
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="network-engineering.html">Network Engineering</a>
         <a href="network-migration.html">Network Migration</a>
         <a href="server-break-fix.html" class="active">Server Break-Fix</a>
-        <a href="contact.html" class="btn-nav">Contact Us</a>
+        <a href="contact.html" class="btn-nav">Request Assessment</a>
       </nav>
     </div>
   </header>
@@ -83,38 +108,101 @@
       <div class="page-hero-inner">
         <span class="badge">Hardware Support</span>
         <h1>Certified Server Break-Fix Services</h1>
-        <p class="sub">Vendor-backed warranty fulfillment, component-level diagnostics, and data preservation protocols. Guaranteed parts sourcing and turnaround SLAs.</p>
+        <p class="sub">Vendor-backed warranty fulfillment, component-level diagnostics, and data preservation protocols. Guaranteed parts sourcing and published turnaround SLAs for Central European enterprises.</p>
       </div>
     </section>
 
     <section class="page-section">
-      <h2>Break-Fix Process & Guarantees</h2>
+      <h2>Break-Fix Process &amp; Guarantees</h2>
+      <p>Our break-fix service goes beyond reactive repair. We combine vendor-certified diagnostics with preventive recommendations to maximize server uptime and extend hardware lifecycle.</p>
       <table>
         <thead>
           <tr><th>Phase</th><th>What We Do</th><th>SLA / Turnaround</th></tr>
         </thead>
         <tbody>
-          <tr><td>1. Remote Diagnostics</td><td>Firmware analysis, RAID/status checks, log collection</td><td>≤ 30 min</td></tr>
-          <tr><td>2. Parts Sourcing</td><td>Guaranteed OEM/compatible components, chain-of-custody tracking</td><td>≤ 4 hours (in-stock)</td></tr>
-          <tr><td>3. On-Site/Remote Repair</td><td>Component replacement, firmware updates, configuration restoration</td><td>≤ 4 hours dispatch</td></tr>
-          <tr><td>4. Data Preservation</td><td>Non-destructive diagnostics, backup validation, zero-data-loss protocol</td><td>Guaranteed</td></tr>
-          <tr><td>5. Preventive Review</td><td>Thermal/power analysis, predictive replacement recommendations</td><td>Included</td></tr>
+          <tr><td><strong>1. Remote Diagnostics</strong></td><td>Firmware analysis, RAID/status checks, log collection, thermal profiling</td><td>≤ 30 min</td></tr>
+          <tr><td><strong>2. Parts Sourcing</strong></td><td>Guaranteed OEM/compatible components, chain-of-custody tracking, warranty validation</td><td>≤ 4 hours (in-stock)</td></tr>
+          <tr><td><strong>3. On-Site / Remote Repair</strong></td><td>Component replacement, firmware updates, configuration restoration, RAID rebuild</td><td>≤ 4 hours dispatch (CZ/SK)</td></tr>
+          <tr><td><strong>4. Data Preservation</strong></td><td>Non-destructive diagnostics, backup validation, zero-data-loss protocol</td><td>Guaranteed</td></tr>
+          <tr><td><strong>5. Preventive Review</strong></td><td>Thermal/power analysis, predictive replacement recommendations, firmware update roadmap</td><td>Included</td></tr>
         </tbody>
       </table>
 
       <div class="grid-2">
         <div class="card">
-          <h4>Certifications & Partnerships</h4>
-          <p>Authorized service pathways for Dell, HPE, and Lenovo. Transparent liability boundaries and parts sourcing guarantees documented in SLA exhibits.</p>
+          <h4>Certifications &amp; Partnerships</h4>
+          <ul>
+            <li>Dell Authorized Service Center</li>
+            <li>HPE Certified Partner (ProLiant, Synergy)</li>
+            <li>Lenovo ThinkSystem certified</li>
+            <li>Transparent liability boundaries</li>
+            <li>Parts sourcing guarantees documented in SLA exhibits</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>What's Covered</h4>
+          <ul>
+            <li>Component-level replacement (PSU, DIMM, CPU, HDD/SSD, NIC, HBA)</li>
+            <li>RAID 0/1/5/6/10 rebuilds and migration</li>
+            <li>Firmware and BIOS updates</li>
+            <li>Server migration (rack-to-rack, data center-to-data center)</li>
+            <li>Firmware optimization and thermal analysis</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Data Preservation Protocol</h4>
+          <p>Every repair follows our zero-data-loss protocol:</p>
+          <ul>
+            <li>Non-destructive diagnostic pass before any component swap</li>
+            <li>Backup validation before and after repair</li>
+            <li>Chain-of-custody logging for all storage media</li>
+            <li>Client sign-off on data integrity before closing ticket</li>
+          </ul>
         </div>
         <div class="card">
           <h4>Pricing Transparency</h4>
-          <p>Fixed-rate diagnostic calls, capped part markups, and clear escalation pricing. No surprise billing. Bundled preventive maintenance available for 30-40% higher retention.</p>
+          <ul>
+            <li>Fixed-rate diagnostic calls (no surprise billing)</li>
+            <li>Capped part markups (max 20% over OEM list price)</li>
+            <li>Clear escalation pricing by service tier</li>
+            <li>Bundled preventive maintenance packages available</li>
+          </ul>
+          <p style="font-size:.85rem;margin-top:1rem"><em>Providers who bundle hardware diagnostics with preventive maintenance recommendations achieve 30–40% higher client retention. We make preventive reviews part of every repair.</em></p>
         </div>
       </div>
 
-      <div class="text-center">
+      <div class="compliance-bar">
+        <h4>🔒 Data Protection &amp; Compliance</h4>
+        <p>All server handling and data preservation processes aligned with GDPR and the Czech Data Protection Act. Configuration backups and diagnostic logs can be stored in regional data centers.</p>
+      </div>
+
+      <h3 style="margin-top:2rem">Frequently Asked Questions</h3>
+      <div class="faq">
+        <details>
+          <summary>Which server brands do you service?</summary>
+          <p>We are authorized service pathways for Dell (PowerEdge), HPE (ProLiant, Synergy), and Lenovo (ThinkSystem). We also service HP Legacy, Supermicro, and custom-built servers with deep firmware and RAID-level expertise.</p>
+        </details>
+        <details>
+          <summary>How fast can you dispatch an engineer?</summary>
+          <p>On-site dispatch within 2–4 hours across the Czech Republic and Slovakia. Poland and Hungary dispatch times depend on the service tier — see our SLA matrix or <a href="contact.html">request a regional assessment</a>.</p>
+        </details>
+        <details>
+          <summary>What if data is lost during the repair?</summary>
+          <p>Our zero-data-loss protocol includes non-destructive diagnostics, backup validation, and chain-of-custody logging. In the rare event of data loss, liability is clearly defined in our service agreement — no hidden fine print.</p>
+        </details>
+        <details>
+          <summary>Do you offer preventive maintenance?</summary>
+          <p>Yes. Every break-fix repair includes a preventive review (thermal/power analysis, predictive replacement recommendations, firmware roadmap). We also offer bundled preventive maintenance packages for higher client retention.</p>
+        </details>
+        <details>
+          <summary>How are parts priced?</summary>
+          <p>We use capped part markups — maximum 20% over OEM list price. All pricing is documented upfront in your service agreement. Diagnostic calls are fixed-rate, so there's no surprise billing.</p>
+        </details>
+      </div>
+
+      <div class="text-center" style="margin-top:2.5rem">
         <a href="contact.html" class="btn btn-primary">Get a Certified Break-Fix Quote</a>
+        <a href="network-engineering.html" class="btn btn-outline" style="margin-left:1rem">Explore L1/L2 Support</a>
       </div>
     </section>
   </main>
@@ -123,7 +211,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <h3>Enterprise Systems Services, s.r.o.</h3>
-        <p>Certified IT services for Central European enterprises. Transparent SLAs, vendor-agnostic methodology, bilingual technical teams.</p>
+        <p>Certified IT services for Central European enterprises. Headquartered in Prague, Czech Republic. Transparent SLAs, vendor-agnostic methodology, bilingual technical teams.</p>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -133,19 +221,20 @@
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
-        <a href="#">Migration Checklists</a>
-        <a href="#">SLA Templates</a>
+        <a href="#">Migration Readiness Checklist</a>
+        <a href="#">SLA Comparison Guide</a>
         <a href="#">Case Studies</a>
+        <a href="#">Compliance Guides</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="mailto:info@enterprise-systems.sk">info@enterprise-systems.sk</a>
-        <a href="tel:+421000000000">+421 XXX XXX XXX</a>
+        <a href="mailto:info@enterprise-systems.cz">info@enterprise-systems.cz</a>
+        <a href="tel:+420000000000">+420 XXX XXX XXX</a>
         <a href="contact.html">Request Assessment</a>
       </div>
     </div>
     <div class="footer-bottom">
-      © 2025 Enterprise Systems Services, s.r.o. All rights reserved.
+      &copy; 2026 Enterprise Systems Services, s.r.o. All rights reserved. | <a href="#" style="color:var(--text-dim)">GDPR</a> | <a href="#" style="color:var(--text-dim)">Cookie Policy</a>
     </div>
   </footer>
 

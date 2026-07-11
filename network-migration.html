@@ -3,17 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Network Migration Projects | Enterprise Systems Services</title>
-  <meta name="description" content="Vendor-agnostic network migration and upgrade projects for Central European enterprises. Phased deployments, parallel-run testing, fixed-fee pricing.">
+  <title>Network Migration Services Czech Republic | Enterprise Systems Services</title>
+  <meta name="description" content="Vendor-agnostic network migration and upgrade projects for Central European enterprises. 5-phase methodology, parallel-run testing, fixed-fee pricing. SD-WAN, SD-SDN, Zero-Trust migrations.">
+  <meta name="keywords" content="network migration services Czech Republic, SD-WAN upgrade project, data center network migration, network migration Slovakia, zero-trust network access migration">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Network Migration Projects | Enterprise Systems Services">
+  <meta property="og:description" content="5-phase vendor-agnostic migration methodology. Fixed-fee packages, parallel-run testing, and rollback protocols for Central European enterprises.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://enterprise-systems.cz/en/network-migration">
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="en" href="https://enterprise-systems.cz/en/network-migration">
+  <link rel="alternate" hreflang="cs" href="https://enterprise-systems.cz/cs/migrace-site">
+  <link rel="alternate" hreflang="x-default" href="https://enterprise-systems.cz/en/network-migration">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://enterprise-systems.cz/en/network-migration">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --dark:#0b1120;--dark-mid:#111827;--dark-border:#2a3550;--light:#f8fafc;--light-mid:#f1f5f9;--light-card:#fff;--light-border:#e2e8f0;--accent:#3b82f6;--accent-hover:#2563eb;--accent2:#10b981;--text-light:#e2e8f0;--text-dim:#94a3b8;--text-dark:#1e293b;--text-dark-mid:#475569;--radius:10px;--shadow:0 4px 24px rgba(0,0,0,.12);--max-width:1200px; }
+    :root { --dark:#0b1120;--dark-mid:#111827;--dark-border:#2a3550;--light:#f8fafc;--light-mid:#f1f5f9;--light-card:#fff;--light-border:#e2e8f0;--accent:#3b82f6;--accent-hover:#2563eb;--accent2:#10b981;--accent2-hover:#059669;--text-light:#e2e8f0;--text-dim:#94a3b8;--text-dark:#1e293b;--text-dark-mid:#475569;--radius:10px;--shadow:0 4px 24px rgba(0,0,0,.12);--max-width:1200px; }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.65;font-size:16px;color:var(--text-dark)}
-    .site-header{background:var(--dark);color:var(--text-light);border-bottom:1px solid var(--dark-border)}
+    .site-header{background:var(--dark);color:var(--text-light);border-bottom:1px solid var(--dark-border);position:sticky;top:0;z-index:100}
     .top-bar{max-width:var(--max-width);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
     .site-header .logo{font-weight:800;font-size:1.1rem;color:var(--accent);letter-spacing:.5px;text-decoration:none}
     .site-header .logo span{color:var(--light)}
@@ -44,14 +61,18 @@
     .step-num{flex-shrink:0;width:48px;height:48px;background:var(--accent);color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.2rem}
     .step-content h4{font-size:1.1rem;font-weight:700;color:var(--text-dark);margin-bottom:.3rem}
     .step-content p{font-size:.92rem;color:var(--text-dark-mid);margin:0}
-    .pricing-table{width:100%;border-collapse:collapse;margin:2rem 0}
-    .pricing-table th,.pricing-table td{padding:14px;text-align:left;border-bottom:1px solid var(--light-border)}
-    .pricing-table th{background:var(--light-mid);font-weight:600;color:var(--text-dark)}
-    .pricing-table td{color:var(--text-dark-mid)}
     .text-center{text-align:center;margin-top:2rem}
     .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.6rem;border-radius:8px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:inherit}
     .btn-primary{background:var(--accent);color:#fff}
     .btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+    .btn-outline{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+    .btn-outline:hover{background:var(--accent);color:#fff}
+    .faq details{margin-bottom:1rem;border-bottom:1px solid var(--light-border);padding-bottom:1rem}
+    .faq summary{font-weight:600;cursor:pointer;color:var(--text-dark)}
+    .faq p{margin-top:.5rem;font-size:.92rem}
+    .compliance-bar{background:linear-gradient(135deg, rgba(16,185,129,.08) 0%, rgba(59,130,246,.08) 100%);padding:1.5rem 2rem;border:1px solid rgba(16,185,129,.2);border-radius:var(--radius);margin:2rem 0}
+    .compliance-bar h4{color:var(--accent2);margin-bottom:.5rem;font-size:1rem}
+    .compliance-bar p{font-size:.9rem;margin:0}
     .site-footer{background:var(--dark);color:var(--text-dim);padding:3rem 2rem;border-top:1px solid var(--dark-border)}
     .footer-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem}
     .footer-brand h3{color:var(--accent);font-size:1rem;margin-bottom:.5rem}
@@ -65,22 +86,20 @@
       .nav-links.active{display:flex}
       .menu-toggle{display:block}
       .footer-inner{grid-template-columns:1fr}
-      .pricing-table{font-size:.85rem}
-      .pricing-table th,.pricing-table td{padding:10px 8px}
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="top-bar">
-      <a href="index.html" class="logo">Enterprise <span>Systems Services</span></a>
+      <a href="index.html" class="logo">ESS <span>Enterprise Systems Services</span></a>
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="network-engineering.html">Network Engineering</a>
         <a href="network-migration.html" class="active">Network Migration</a>
         <a href="server-break-fix.html">Server Break-Fix</a>
-        <a href="contact.html" class="btn-nav">Contact Us</a>
+        <a href="contact.html" class="btn-nav">Request Assessment</a>
       </nav>
     </div>
   </header>
@@ -89,49 +108,49 @@
     <section class="page-hero">
       <div class="page-hero-inner">
         <span class="badge">Transformation Projects</span>
-        <h1>Network Migration & Upgrade Projects</h1>
-        <p class="sub">Vendor-agnostic transformation with phased deployments, parallel-run testing, and rollback protocols. Fixed-fee packages with clear deliverables.</p>
+        <h1>Network Migration &amp; Upgrade Projects</h1>
+        <p class="sub">Vendor-agnostic transformation with phased deployments, parallel-run testing, and rollback protocols. Fixed-fee packages with clear deliverables for Central European enterprises.</p>
       </div>
     </section>
 
     <section class="page-section">
       <h2>Our 5-Phase Migration Methodology</h2>
       <p>We minimize downtime through structured discovery, risk assessment, and controlled cutover windows. Standard maintenance window: 72 hours (weekend deployment).</p>
-      
+
       <div class="timeline">
         <div class="timeline-step">
           <div class="step-num">1</div>
           <div class="step-content">
-            <h4>Discovery & Audit</h4>
-            <p>Topology mapping, dependency analysis, capacity planning, and compliance review.</p>
+            <h4>Discovery &amp; Audit</h4>
+            <p>Full topology mapping, dependency analysis, capacity planning, compliance review (GDPR, data residency), and stakeholder interviews.</p>
           </div>
         </div>
         <div class="timeline-step">
           <div class="step-num">2</div>
           <div class="step-content">
-            <h4>Design & Simulation</h4>
-            <p>Lab validation, configuration templates, rollback procedures, and stakeholder sign-off.</p>
+            <h4>Design &amp; Simulation</h4>
+            <p>Lab validation, configuration templates, rollback procedures, risk assessment, and stakeholder sign-off before any hardware touches the floor.</p>
           </div>
         </div>
         <div class="timeline-step">
           <div class="step-num">3</div>
           <div class="step-content">
             <h4>Parallel Run</h4>
-            <p>Dual-stack testing, traffic shadowing, and performance benchmarking before cutover.</p>
+            <p>Dual-stack testing, traffic shadowing, and performance benchmarking. Both legacy and new infrastructure run simultaneously to validate stability.</p>
           </div>
         </div>
         <div class="timeline-step">
           <div class="step-num">4</div>
           <div class="step-content">
             <h4>Phased Cutover</h4>
-            <p>Controlled deployment with 72-hour maintenance window, real-time monitoring, and immediate rollback capability.</p>
+            <p>Controlled deployment within 72-hour maintenance window, real-time monitoring, and immediate rollback capability. Zero-surprise go-live.</p>
           </div>
         </div>
         <div class="timeline-step">
           <div class="step-num">5</div>
           <div class="step-content">
             <h4>Post-Migration Validation</h4>
-            <p>SLA verification, documentation handover, and 30-day hypercare support.</p>
+            <p>SLA verification, documentation handover, stakeholder demos, and 30-day hypercare support period.</p>
           </div>
         </div>
       </div>
@@ -140,19 +159,60 @@
         <div class="card">
           <h4>Pricing Models</h4>
           <ul>
-            <li><strong>Fixed-Fee Packages:</strong> Clear deliverables, capped overages</li>
-            <li><strong>Time & Materials + Cap:</strong> Flexible scoping with budget protection</li>
+            <li><strong>Fixed-Fee Packages:</strong> Clear deliverables, capped overages — ideal for budget certainty</li>
+            <li><strong>Time &amp; Materials + Cap:</strong> Flexible scoping with budget protection</li>
             <li><strong>Outcome-Based:</strong> Uptime/latency guarantees tied to pricing</li>
           </ul>
+          <p style="font-size:.85rem;margin-top:1rem"><em>Enterprise buyers in Central Europe increasingly prefer fixed-fee structures with clear deliverables. We default to fixed-fee unless your scope demands flexibility.</em></p>
         </div>
         <div class="card">
-          <h4>Case Study Highlights</h4>
-          <p>Migrated 800+ user legacy VLAN architecture to SD-SDN framework across CZ/SK hubs. Achieved 40% latency reduction and zero data loss during cutover.</p>
+          <h4>Migrations We Specialize In</h4>
+          <ul>
+            <li>Legacy VLAN → SD-SDN framework</li>
+            <li>Traditional WAN → SD-WAN</li>
+            <li>Perimeter-based → Zero-Trust Network Access (ZTNA)</li>
+            <li>On-premise → Hybrid data center</li>
+            <li>Cisco/Aruba/Juniper cross-vendor unification</li>
+          </ul>
         </div>
       </div>
 
-      <div class="text-center">
+      <h3 style="margin-top:2rem">Case Study: Enterprise VLAN to SD-SDN Migration</h3>
+      <div class="card" style="margin:1.5rem 0">
+        <h4>Czech Republic — Mid-Market Manufacturing Client</h4>
+        <p><strong>Challenge:</strong> Legacy VLAN architecture across 4 sites (Prague, Brno, Bratislava, Vienna) — 800+ users, increasing latency during peak hours.</p>
+        <p><strong>Solution:</strong> 5-phase migration to SD-SDN framework with parallel-run testing. Zero data loss during cutover, completed within a 72-hour weekend maintenance window.</p>
+        <p><strong>Outcome:</strong> 40% reduction in average network latency. 99.7% uptime in first 30 days post-migration. Hypercare support period delivered zero L2 escalation tickets.</p>
+      </div>
+
+      <div class="compliance-bar">
+        <h4>🔒 Compliance-First Migration</h4>
+        <p>All migration projects delivered under GDPR-compliant frameworks. Czech Data Protection Act alignment. Regional data residency options for configuration backups and monitoring data.</p>
+      </div>
+
+      <h3 style="margin-top:2rem">Frequently Asked Questions</h3>
+      <div class="faq">
+        <details>
+          <summary>How much downtime should we expect?</summary>
+          <p>Our standard is a 72-hour weekend maintenance window for full cutover. Parallel-run testing minimizes risk, and immediate rollback capability ensures that even if you need to revert, your network is back to baseline within hours — not days.</p>
+        </details>
+        <details>
+          <summary>Do you prefer fixed-fee or time-and-materials?</summary>
+          <p>We default to fixed-fee packages because enterprise buyers in Central Europe value budget certainty. However, if your scope is fluid, our Time &amp; Materials + Cap model offers flexibility without unlimited budget exposure.</p>
+        </details>
+        <details>
+          <summary>Can you work with our existing vendor ecosystem?</summary>
+          <p>Absolutely. Our methodology is strictly vendor-agnostic. We adapt to your Cisco, Juniper, Aruba, or MikroTik stack — or mix-and-match. No forced migrations or lock-in agreements.</p>
+        </details>
+        <details>
+          <summary>What does post-migration support include?</summary>
+          <p>Every project includes a 30-day hypercare period: dedicated L2 escalation, weekly SLA reports, and a final stakeholder demo. After hypercare, clients can transition to our L1/L2 managed support with a discount.</p>
+        </details>
+      </div>
+
+      <div class="text-center" style="margin-top:2.5rem">
         <a href="contact.html" class="btn btn-primary">Schedule a Migration Consultation</a>
+        <a href="network-engineering.html" class="btn btn-outline" style="margin-left:1rem">Explore L1/L2 Support</a>
       </div>
     </section>
   </main>
@@ -161,7 +221,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <h3>Enterprise Systems Services, s.r.o.</h3>
-        <p>Certified IT services for Central European enterprises. Transparent SLAs, vendor-agnostic methodology, bilingual technical teams.</p>
+        <p>Certified IT services for Central European enterprises. Headquartered in Prague, Czech Republic. Transparent SLAs, vendor-agnostic methodology, bilingual technical teams.</p>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -171,19 +231,20 @@
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
-        <a href="#">Migration Checklists</a>
-        <a href="#">SLA Templates</a>
+        <a href="#">Migration Readiness Checklist</a>
+        <a href="#">SLA Comparison Guide</a>
         <a href="#">Case Studies</a>
+        <a href="#">Compliance Guides</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="mailto:info@enterprise-systems.sk">info@enterprise-systems.sk</a>
-        <a href="tel:+421000000000">+421 XXX XXX XXX</a>
+        <a href="mailto:info@enterprise-systems.cz">info@enterprise-systems.cz</a>
+        <a href="tel:+420000000000">+420 XXX XXX XXX</a>
         <a href="contact.html">Request Assessment</a>
       </div>
     </div>
     <div class="footer-bottom">
-      © 2025 Enterprise Systems Services, s.r.o. All rights reserved.
+      &copy; 2026 Enterprise Systems Services, s.r.o. All rights reserved. | <a href="#" style="color:var(--text-dim)">GDPR</a> | <a href="#" style="color:var(--text-dim)">Cookie Policy</a>
     </div>
   </footer>
 
